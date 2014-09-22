@@ -1,0 +1,271 @@
+paste(c(1, 2, 3),c("X", "Y", "Z"), sep = "")
+paste(1:3,c("X", "Y", "Z"), sep = "")
+paste(LETTERS, 1:4, sep = "-")
+library(swirl)
+swirl()
+x <- c(44, NA, 5 , NA)
+x * 3
+y <- rnorm(1000)
+z <- rep(NA; 1000)
+z <- rep(NA, 1000)
+myData <- sample(c(y,z),100)
+is.na(myData)
+myNa <- is.na(myData)
+myNA <- is.na(myData)
+myNA
+myData == NA
+sum(myNA)
+myData
+0\0
+0/0
+Inf-Inf
+x
+x[1:10]
+x[is.na(x)]
+x[!is.na(x)]
+y <- x[!is.na(x)]
+y
+y[y>0]
+x[x>0]
+x[!is.na(x) & x > 0]
+c(3,4,7)
+x[c(3,5,7)]
+x[0]
+x[3000]
+x[c(-2,-10)]
+x[-c(2,10)]
+vect <- c(foo = 11, bar = 2, norf = NA)
+vect
+names(vect)
+vect2 <- c(11,2,NA)
+names(vect2)<-c("foo","bar","norf")
+identical(vect,vect2)
+vect["bar"]
+vect[c("foo","bar")]
+myVector <- 1:20
+myVector
+dim(myVector)
+length(myVector)
+dim(myVector) <- c(4,5)
+dim(mYVe)
+dim(myVector)
+attributes(myVector)
+myVector
+class(myVector)
+myMa
+myMatrix <- myVector
+??matrix
+?matrix
+matrix(1:20,4,5)
+matrix(1:20,5,4)
+myMatrix <- matrix(1:20,4,5)
+myMatrix <- matrix(1:20,5,4)
+myMatrix2 <- matrix(1:20,5,4)
+myMatrix2 <- matrix(1:20,4,5)
+identical(myMatrix,myMatrix2)
+parients <- c("Bill","Gina","Kelly","Sean")
+patients <- c("Bill","Gina","Kelly","Sean")
+cbind(myMatrix,patients)
+cbind(patients,myMatrix)
+myData <- data.frame(patients,myMatrix)
+myData
+class(myData)
+v <- c("patient", "age", "weight", "bp", "rating", "test")
+cnames <- c("patient", "age", "weight", "bp", "rating", "test")
+colnames(myData) <- cnames
+myData
+0
+x <- 1:10#
+if(x > 5) {#
+        x <- 0#
+}
+f <- function(x) {#
+        g <- function(y) {#
+                y + z#
+        }#
+        z <- 4#
+        x + g(x)#
+}
+z <- 10
+f(3)
+library(dataset)
+library(datasets)
+data(mtcars)
+apply(mtcars, 2, mean)
+tapply(mtcars$mpg, mtcars$cyl, mean)
+data <- read.csv("/Users/mickfenneck/Desktop/getdata-data-ss06hid.csv")
+str(data)
+data
+nHouseBig <- data$WGTP[!is.na(data$WGTP) & data$WGTP > 1000000]
+nHouseBig
+nHouseBig <- data$WGTP[ data$WGTP > 1000000]
+nHouseBig
+nHouseBig <- data$WGTP[!is.na]
+nHouseBig <- data$WGTP[!is.na(data\)]
+nHouseBig <- data$WGTP[!is.na(data$WGTP)]
+nHouseBig
+nHouseBig <- data$ADJUST[!is.na(data$ADJUST)]
+nHouseBig
+nHouseBig <- data$ADJUST[!is.na(data$ADJUST) & data$ADJUST > 1000000]
+nHouseBig
+str(data$ADJUST)
+nHouseBig <- data$VAL[!is.na(data$VAL) & data$VAL > 1000000]
+nHouseBig
+str(data$VAL)
+nHouseBig <- data$VAL[!is.na(data$VAL) & data$VAL = 24]
+nHouseBig <- data$VAL[!is.na(data$VAL) & data$VAL == 24]
+nHouseBig
+length(nHouseBig)
+data2 <- read.csv("/Users/mickfenneck/Desktop/pointless.csv")
+dat <- data2
+sum(dat$Zip*dat$Ext,na.rm=T)
+library(XML)
+doc <- xmlTreeParse("/Users/mickfenneck/Desktop/getdata-data-restaurants.xml",useInternal=TRUE)
+str(doc)
+rootNode <- xmlRoot(doc)
+str(rootNode)
+rootNode[1]
+rootNode[[1]]
+rootNode[[1][1]]
+rootNode[[1]][[1]]
+xmlSApply(rootNode,xmlValue)
+str(xmlSApply(rootNode,xmlValue))
+?rowMeans
+?fread
+??fread
+library(data.table)
+DT <- fread("/Users/mickfenneck/Downloads/getdata-data-ss06pid.csv")
+str(DT)
+rowMeans(DT)[DT$SEX==1]; rowMeans(DT)[DT$SEX==2]
+rowMeans(DT)[DT$SEX==1]
+??rowMeans
+tapply(DT$pwgtp15,DT$SEX,mean)
+mean(DT$pwgtp15,by=DT$SEX)
+DT[,mean(pwgtp15),by=SEX]
+mean(DT[DT$SEX==1,]$pwgtp15); mean(DT[DT$SEX==2,]$pwgtp15)
+sapply(split(DT$pwgtp15,DT$SEX),mean)
+system.time(tapply(DT$pwgtp15,DT$SEX,mean))
+system.time(DT[,mean(pwgtp15),by=SEX])
+system.time(mean(DT[DT$SEX==1,]$pwgtp15))
+system.time(mean(DT[DT$SEX==2,]$pwgtp15)
+)
+data <- read.csv("/Users/mickfenneck/Desktop/elena.csv")
+str(data)
+mean(data$eta)
+data <- read.csv("/Users/mickfenneck/Desktop/elena.csv")
+mean(data$eta)
+library(datasets)
+head(mtcars)
+?melt
+??melt
+?read.table
+??<<-
+""
+??"<<-"
+source("http://d396qusza40orc.cloudfront.net/rprog%2Fscripts%2Fsubmitscript3.R")
+source("submitscript3.R")
+dir
+dir()
+library(datasets)
+with(cars, plot(speed,dist))
+?legend
+?pbeta
+x <- 1:4
+p <- x/sum(x)#
+temp <- rbind(x, p)#
+rownames(temp) <- c("X", "Prob")#
+temp
+?mean
+mean(temp[x]*temp[Prob])
+(0.1+0.4+0.9+1.6)/4
+library(nlme)
+library(lattice)
+xyplot(weight ~ Time | Diet, BodyWeight)
+library(datasets)#
+data(airquality)
+p <- xyplot(Ozone ~ Wind | factor(Month), data = airquality)
+p
+?hist
+library(lattice)
+??histogram
+?hist
+set.seed(1234)
+dataMatrix <- as.matrix(dataFrame)[sample(1:12), ]
+(.52*.3)/(.52*.3+.25*.7)
+(.52*.7)/(.52*.7+.25*.3)
+var(c(0, 100, 200, 300, 400, 500, 600))
+var(c(0,1,1,1,1,1,2))
+var(c(0,1,2,3,4,5,6))
+var(c(0, 25, 25, 25, 25, 25, 25))
+pnorm(70, mean=80, sd=10)
+qnorm(0.95, mean=1100, sd=75)
+0.5*4
+0.5^4
+0.5^5
+0.25^10
+0.25^5+
+ù
+0.25^5
+qnorm(0.95, mean=1100, sd=0.75)
+(19+15)*2
+6/32
+means <- cumsum(sample(0:1, 10000, replace=TRUE))/1:10000
+means
+mean(means)
+var(means)
+var(means)*100
+setwd("/Users/mickfenneck/DataAnalysisStatDuke/")#
+data <- load(file = "statistics-project-gss.Rdata")
+str(data)
+str(data[gss])
+data[gss]
+data
+print data
+degree <- gss$degree
+sei <- gss$sei
+partyid <- gss$partyid
+str(degree)
+str(sei)
+str(partyid)
+table(degree,sei,partyid)
+table(degree,sei,partyid)[1]
+table(degree,sei,partyid)[2]
+table(degree,sei,partyid)[][1]
+summary(table(degree,sei,partyid))
+str(degree)
+str(sei)
+str(partyid)
+summary(table(degree,partyid))
+table(degree,partyid)
+degree <- gss$degree#
+partyid <- gss$partyid#
+#
+tbdata <- table(degree, partyid)
+plot(tbdata)
+plobarplot(tbdata)
+plobarplot(tbdata(degree))
+barplot(tbdata(degree)
+sa
+barplot(tbdata)
+barplot(tbdata, main="Party Affiliation",#
+  xlab="Degree", col=c("darkblue","red"))
+plot(tbdata, main="Party Affiliation",#
+  xlab="Degree", col=c("darkblue","red"))
+plot(tbdata, main="Party Affiliation",#
+  xlab="Degree", col=c("darkblue","red","green","black","brown"))
+plot(tbdata, main="Party Affiliation",#
+  xlab="Degree")
+plot(tbdata, main="Party Affiliation")
+plot(tbdata, main="Party Affiliation", ylab="y-axix label")
+plot(tbdata, main="Party Affiliation", srt=45)
+plot(tbdata, main="Party Affiliation", srt="45")
+mosaicplot(tbdata(degree,partyid))
+mosaicplot(tbdata)
+plot(tbdata, main="Party Affiliation", , legend=TRUE)
+plot(tbdata, main="Party Affiliation",legend=TRUE)
+plot(tbdata, main="Party Affiliation",legend=TRUE)
+degree
+str(degree)
+levels(degree)
+levels(partyid)
+plot(tbdata, main="Party Affiliation",legend=TRUE)

@@ -1,0 +1,71 @@
+---
+title: "Highest Degree and Political Party Affiliation"
+author: "mickfenneck"
+date: "22 settembre 2014"
+output: html_document
+---
+
+<!-- Import of the data -->
+```{r echo=FALSE}
+
+data <- load(url("http://bit.ly/dasi_gss_data"))
+
+```
+
+### Introduction:
+
+This analysis is thought for analyzing a General Social Survey in order to find if exists a correlation between the Political Party Affiliation of a subject and its highest degree.
+
+The General Social Surveys (GSS) were designed as part of a data diffusion project in 1972. The GSS replicated questionnaire items and wording in order to facilitate time-trend studies. The latest survey, GSS 2012, includes a cumulative file that merges all 29 General Social Surveys into a single file containing data from 1972 to 2012. The items appearing in the surveys are one of three types: Permanent questions that occur on each survey, rotating questions that appear on two out of every three surveys (1973, 1974, and 1976, or 1973, 1975, and 1976), and a few occasional questions such as split ballot experiments that occur in a single survey. The 2012 surveys included seven topic modules: Jewish identity, generosity, workplace violence, science, skin tone, and modules for experimental and miscellaneous questions. The International Social Survey Program (ISSP) module included in the 2012 survey was gender. The data also contain several variables describing the demographic characteristics of the respondents.
+
+
+### Data:
+
+This extract of the General Social Survey (GSS) Cumulative File 1972-2012 provides a sample of selected indicators in the GSS with the goal of providing a convenient data resource for students learning statistical reasoning using the R language. Unlike the full General Social Survey Cumulative File, we have removed missing values from the responses and created factor variables when appropriate to facilitate analysis using R. Our hope is that this will allow students to focus on statistical concepts without having to (initially) be concerned about some of the data management and interpretation issues associated with missing data and factor variables in R. Other than the two modifications mentioned above, all data and coding come from the original dataset. Students and researchers seeking to conduct research or explore the full codebook behind the full General Social Survey Cumulative File are urged to consult the original dataset at the citation that follows:
+
+Smith, Tom W., Michael Hout, and Peter V. Marsden. General Social Survey, 1972-2012 [Cumulative File]. ICPSR34802-v1. Storrs, CT: Roper Center for Public Opinion Research, University of Connecticut /Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributors], 2013-09-11. doi:10.3886/ICPSR34802.v1
+
+
+### Exploratory data analysis:
+
+The basic structure of the dataset is
+
+```{r}
+
+names(gss)
+
+```
+
+As can be seen the dataset provides many different variable but the only one in which we are interested are "degree"" and "partyid".
+We can subset that variables with
+
+```{r}
+
+degree <- gss$degree
+partyid <- gss$partyid
+
+tbdata <- table(degree, partyid)
+
+summary(tbdata)
+
+```
+
+We have 55754 numbers of cases and 2 factor categorical values.
+
+We can see the  entire table and plot it.
+
+```{r}
+
+tbdata
+
+plot(tbdata, main="Party Affiliation")
+
+```
+
+### Inference:
+
+Insert inference section here...
+
+### Conclusion:
+
+Insert conclusion here...
